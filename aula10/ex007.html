@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        input#txtnumero1, #txtnumero2{
+            width: 50px;
+
+        }
+        input#txtnumero1:hover, #txtnumero2:hover {
+            border-radius: 10px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtnumero1" id="txtnumero1"> +
+    <input type="number" name="txtnumero2" id="txtnumero2">
+    <input type="button" value="Somar" onclick="somar()" id="soma">
+    <div id="resultado"></div>
+    <script>
+        function somar() {
+            var txtnumber1 = document.getElementById("txtnumero1")
+            var txtnumber2 = document.getElementById("txtnumero2")
+            var resultado = document.getElementById("resultado")
+            var number1 = Number(txtnumber1.value)
+            var number2 = Number(txtnumber2.value)
+            var soma = number1 + number2
+            resultado.innerHTML = soma 
+        }
+    </script>
+</body>
+</html>
